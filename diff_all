@@ -18,7 +18,7 @@ signature
 # name: Stratos200 RF007
 
 # resources
-resource MOTOR 2 B03
+resource MOTOR 2 A15
 resource SERVO 4 NONE
 
 # feature
@@ -30,7 +30,6 @@ feature RPM_FILTER
 
 # serial
 serial 1 1024 115200 57600 0 115200
-serial 3 64 115200 57600 0 115200
 
 # servo
 servo 1 1500 -700 700 500 500 400 0 3
@@ -43,11 +42,8 @@ mixer input SP -1250 1250 -730
 mixer input SY -1000 1000 1000
 mixer input SC -1250 1250 1000
 
-# map
-map AECR1T23
-
 # aux
-aux 0 0 0 1910 2100 0 0
+aux 0 0 0 1355 2100 0 0
 aux 1 0 0 900 900 0 0
 aux 2 0 0 900 900 0 0
 aux 3 0 0 900 900 0 0
@@ -116,7 +112,6 @@ adjfunc 41 0 0 1500 1500 0 1500 1500 1500 1500 0 0 100
 set gyro_lpf1_static_hz = 125
 set dyn_notch_count = 2
 set acc_calibration = -132,0,10,1
-set serialrx_provider = CRSF
 set blackbox_mode = ARMED
 set blackbox_rate_denom = 4
 set blackbox_log_esc = ON
@@ -126,10 +121,11 @@ set use_unsynced_pwm = OFF
 set motor_pwm_protocol = DSHOT300
 set motor_poles = 24,12,8,8
 set align_board_yaw = 180
-set bat_capacity = 800
+set bat_capacity = 750
+set vbat_min_cell_voltage = 310
 set current_meter = ESC
 set battery_meter = ESC
-set battery_cell_count = 4
+set battery_cell_count = 3
 set tail_rotor_mode = MOTORIZED
 set tail_motor_idle = 50
 set swash_collective_trim = -163
@@ -146,9 +142,6 @@ set rc_arm_throttle = 1010
 set rc_min_throttle = 1020
 set rc_max_throttle = 2000
 set pid_process_denom = 1
-set crsf_telemetry_mode = CUSTOM
-set crsf_telemetry_link_rate = 1000
-set crsf_telemetry_link_ratio = 4
 set telemetry_sensors = 3,5,4,6,7,8,45,44,42,43,47,46,48,49,52,51,50,17,18,20,19,30,31,32,33,36,41,28,25,24,23,22,21,60,61,26,27,15,88,89
 set esc_sensor_protocol = HOBBYWINGV5
 set esc_sensor_halfduplex = ON
@@ -196,7 +189,7 @@ set error_limit = 35,35,40
 set error_decay_time_yaw = 250
 set error_decay_limit_yaw = 12
 set iterm_relax_cutoff = 20,20,15
-set gov_headspeed = 4200
+set gov_headspeed = 3500
 set gov_gain = 60
 set gov_tta_gain = 55
 set gov_tta_limit = 95
@@ -235,7 +228,7 @@ set error_limit = 35,35,40
 set error_decay_time_yaw = 250
 set error_decay_limit_yaw = 12
 set iterm_relax_cutoff = 20,20,20
-set gov_headspeed = 4800
+set gov_headspeed = 3800
 set gov_gain = 50
 set gov_tta_gain = 55
 set gov_tta_limit = 95
@@ -272,7 +265,7 @@ set error_limit = 35,35,40
 set error_decay_time_yaw = 250
 set error_decay_limit_yaw = 12
 set iterm_relax_cutoff = 20,20,20
-set gov_headspeed = 5410
+set gov_headspeed = 4200
 set gov_gain = 50
 set gov_tta_gain = 60
 set gov_tta_limit = 95
@@ -327,3 +320,4 @@ rateprofile 0
 
 # save configuration
 save
+# 
