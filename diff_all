@@ -37,10 +37,10 @@ servo 2 1500 -700 700 500 500 400 0 3
 servo 3 1500 -700 700 500 500 400 0 3
 
 # mixer input
-mixer input SR -1250 1250 730
-mixer input SP -1250 1250 -730
+mixer input SR -1250 1250 680
+mixer input SP -1250 1250 -680
 mixer input SY -1000 1000 1000
-mixer input SC -1250 1250 1000
+mixer input SC -1250 1250 900
 
 # aux
 aux 0 0 0 1355 2100 0 0
@@ -128,7 +128,7 @@ set battery_meter = ESC
 set battery_cell_count = 3
 set tail_rotor_mode = MOTORIZED
 set tail_motor_idle = 50
-set swash_collective_trim = -163
+set swash_collective_trim = 190
 set swash_pitch_limit = 2000
 set gov_mode = MODE1
 set gov_startup_time = 80
@@ -189,7 +189,7 @@ set error_limit = 35,35,40
 set error_decay_time_yaw = 250
 set error_decay_limit_yaw = 12
 set iterm_relax_cutoff = 20,20,15
-set gov_headspeed = 3500
+set gov_headspeed = 3000
 set gov_gain = 60
 set gov_tta_gain = 55
 set gov_tta_limit = 95
@@ -228,7 +228,7 @@ set error_limit = 35,35,40
 set error_decay_time_yaw = 250
 set error_decay_limit_yaw = 12
 set iterm_relax_cutoff = 20,20,20
-set gov_headspeed = 3800
+set gov_headspeed = 3400
 set gov_gain = 50
 set gov_tta_gain = 55
 set gov_tta_limit = 95
@@ -265,7 +265,7 @@ set error_limit = 35,35,40
 set error_decay_time_yaw = 250
 set error_decay_limit_yaw = 12
 set iterm_relax_cutoff = 20,20,20
-set gov_headspeed = 4200
+set gov_headspeed = 3800
 set gov_gain = 50
 set gov_tta_gain = 60
 set gov_tta_limit = 95
@@ -277,7 +277,7 @@ profile 4
 profile 5
 
 # restore original profile selection
-profile 0
+profile 2
 
 rateprofile 0
 
