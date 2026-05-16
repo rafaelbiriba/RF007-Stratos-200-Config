@@ -1,1 +1,2 @@
-# RF007-Stratos-200-Config
+# Rotorflight Configuration for RF007 + XLPower Stratos 200
+
